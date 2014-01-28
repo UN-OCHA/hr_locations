@@ -47,7 +47,7 @@ function hr_locations_feeds_importer_default() {
           ),
           1 => array(
             'source' => 'Name',
-            'target' => 'name_field',
+            'target' => 'name_field:et:en',
             'unique' => FALSE,
           ),
           2 => array(
