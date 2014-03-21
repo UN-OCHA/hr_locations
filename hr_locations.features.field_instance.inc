@@ -49,6 +49,39 @@ function hr_locations_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-hr_location-field_geo_data'
+  $field_instances['taxonomy_term-hr_location-field_geo_data'] = array(
+    'bundle' => 'hr_location',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'postgis',
+        'settings' => array(
+          'map' => 'default',
+        ),
+        'type' => 'openlayers',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_geo_data',
+    'label' => 'Geospatial data',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'postgis',
+      'settings' => array(),
+      'type' => 'wkt',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-hr_location-field_local_pcode'
   $field_instances['taxonomy_term-hr_location-field_local_pcode'] = array(
     'bundle' => 'hr_location',
@@ -159,6 +192,7 @@ function hr_locations_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Description');
+  t('Geospatial data');
   t('Local PCode');
   t('Name');
   t('PCode');

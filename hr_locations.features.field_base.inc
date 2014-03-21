@@ -10,6 +10,27 @@
 function hr_locations_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_geo_data'
+  $field_bases['field_geo_data'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_geo_data',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'postgis',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'profile2_private' => FALSE,
+      'srid' => 4326,
+      'type' => 'POLYGON',
+    ),
+    'translatable' => 0,
+    'type' => 'postgis',
+  );
+
   // Exported field_base: 'field_local_pcode'
   $field_bases['field_local_pcode'] = array(
     'active' => 1,
