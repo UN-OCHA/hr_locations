@@ -99,7 +99,7 @@ function hr_locations_field_default_field_bases() {
           'hr_location' => 'hr_location',
         ),
       ),
-      'profile2_private' => FALSE,
+      'profile2_private' => 0,
       'target_type' => 'taxonomy_term',
     ),
     'translatable' => 0,
