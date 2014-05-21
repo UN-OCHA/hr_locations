@@ -49,25 +49,27 @@ function hr_locations_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-hr_location-field_geo_data'
-  $field_instances['taxonomy_term-hr_location-field_geo_data'] = array(
+  // Exported field_instance: 'taxonomy_term-hr_location-field_geofield'
+  $field_instances['taxonomy_term-hr_location-field_geofield'] = array(
     'bundle' => 'hr_location',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'postgis',
+        'module' => 'geofield',
         'settings' => array(
-          'map' => 'default',
+          'data' => 'full',
+          'map_preset' => 'geofield_formatter_map',
         ),
-        'type' => 'openlayers',
-        'weight' => 4,
+        'type' => 'geofield_openlayers',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_geo_data',
-    'label' => 'Geospatial data',
+    'field_name' => 'field_geofield',
+    'label' => 'Geofield',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -75,10 +77,10 @@ function hr_locations_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'postgis',
+      'module' => 'geofield',
       'settings' => array(),
-      'type' => 'wkt',
-      'weight' => 31,
+      'type' => 'geofield_wkt',
+      'weight' => 32,
     ),
   );
 
@@ -192,7 +194,7 @@ function hr_locations_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Description');
-  t('Geospatial data');
+  t('Geofield');
   t('Local PCode');
   t('Name');
   t('PCode');

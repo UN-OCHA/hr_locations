@@ -61,13 +61,13 @@ function hr_locations_feeds_importer_default() {
             'unique' => FALSE,
           ),
           4 => array(
-            'source' => 'WKT',
-            'target' => 'field_geo_data:wkt',
+            'source' => 'PCode',
+            'target' => 'guid',
             'unique' => FALSE,
           ),
           5 => array(
-            'source' => 'PCode',
-            'target' => 'guid',
+            'source' => 'WKT',
+            'target' => 'field_geofield:wkt',
             'unique' => FALSE,
           ),
         ),
@@ -145,7 +145,7 @@ function hr_locations_feeds_importer_default() {
           ),
           5 => array(
             'source' => 'geom',
-            'target' => 'field_geo_data:wkt',
+            'target' => 'field_geofield:wkt',
             'unique' => FALSE,
           ),
         ),
