@@ -94,15 +94,12 @@ function hr_locations_feeds_importer_default() {
     'name' => 'Locations Shapefiles',
     'description' => 'Import locations from a shapefile',
     'fetcher' => array(
-      'plugin_key' => 'FeedsFileFetcher',
+      'plugin_key' => 'FeedsHTTPFetcher',
       'config' => array(
-        'allowed_extensions' => 'zip',
-        'direct' => 0,
-        'directory' => 'private://feeds',
-        'allowed_schemes' => array(
-          'public' => 'public',
-          'private' => 'private',
-        ),
+        'auto_detect_feeds' => FALSE,
+        'use_pubsubhubbub' => FALSE,
+        'designated_hub' => '',
+        'request_timeout' => NULL,
       ),
     ),
     'parser' => array(
@@ -119,27 +116,27 @@ function hr_locations_feeds_importer_default() {
         'vocabulary' => 0,
         'mappings' => array(
           0 => array(
-            'source' => 'Name',
+            'source' => 'HRName',
             'target' => 'name',
             'unique' => FALSE,
           ),
           1 => array(
-            'source' => 'Name',
+            'source' => 'HRName',
             'target' => 'name_field:et:en',
             'unique' => FALSE,
           ),
           2 => array(
-            'source' => 'PCode',
+            'source' => 'HRPCode',
             'target' => 'field_pcode',
             'unique' => 1,
           ),
           3 => array(
-            'source' => 'PCode',
+            'source' => 'HRPCode',
             'target' => 'guid',
             'unique' => FALSE,
           ),
           4 => array(
-            'source' => 'Parent',
+            'source' => 'HRParent',
             'target' => 'parentguid',
             'unique' => FALSE,
           ),
