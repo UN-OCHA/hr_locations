@@ -148,7 +148,7 @@ function hr_locations_feeds_importer_default() {
         ),
         'update_existing' => '2',
         'input_format' => 'plain_text',
-        'skip_hash_check' => 0,
+        'skip_hash_check' => 1,
         'bundle' => 'hr_location',
       ),
     ),
