@@ -22,7 +22,7 @@ function hr_locations_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_ctools_plugin_directory().
  */
-function hr_api_ctools_plugin_directory($module, $plugin) {
+function hr_locations_ctools_plugin_directory($module, $plugin) {
   if ($module == 'restful') {
     return 'plugins/' . $plugin;
   }
