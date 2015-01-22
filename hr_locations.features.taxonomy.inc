@@ -13,7 +13,7 @@ function hr_locations_taxonomy_default_vocabularies() {
       'name' => 'Location',
       'machine_name' => 'hr_location',
       'description' => '',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
     ),

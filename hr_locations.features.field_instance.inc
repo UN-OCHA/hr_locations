@@ -84,6 +84,47 @@ function hr_locations_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-hr_location-field_loc_admin_level'
+  $field_instances['taxonomy_term-hr_location-field_loc_admin_level'] = array(
+    'bundle' => 'hr_location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_loc_admin_level',
+    'label' => 'Admin Level',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 33,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-hr_location-field_local_pcode'
   $field_instances['taxonomy_term-hr_location-field_local_pcode'] = array(
     'bundle' => 'hr_location',
@@ -193,6 +234,7 @@ function hr_locations_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Admin Level');
   t('Description');
   t('Geofield');
   t('Local PCode');
