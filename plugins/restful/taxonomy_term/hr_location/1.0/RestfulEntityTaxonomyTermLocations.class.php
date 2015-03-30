@@ -38,6 +38,10 @@ class RestfulEntityTaxonomyTermLocations extends \RestfulEntityBaseTaxonomyTerm 
       'property' => 'field_pcode',
     );
 
+    $public_fields['iso3'] = array(
+      'property' => 'field_iso3',
+    );
+
     $public_fields['parents'] = array(
       'callback' => array($this, 'getParents'),
     );
