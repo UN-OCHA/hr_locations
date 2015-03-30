@@ -45,7 +45,7 @@ function hr_locations_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 
@@ -80,7 +80,46 @@ function hr_locations_field_default_field_instances() {
       'module' => 'geofield',
       'settings' => array(),
       'type' => 'geofield_wkt',
-      'weight' => 32,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-hr_location-field_iso3'
+  $field_instances['taxonomy_term-hr_location-field_iso3'] = array(
+    'bundle' => 'hr_location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_iso3',
+    'label' => 'ISO3',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
     ),
   );
 
@@ -121,7 +160,7 @@ function hr_locations_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 33,
+      'weight' => 5,
     ),
   );
 
@@ -156,7 +195,7 @@ function hr_locations_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -3,
+      'weight' => 3,
     ),
   );
 
@@ -191,7 +230,7 @@ function hr_locations_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -4,
+      'weight' => 2,
     ),
   );
 
@@ -228,7 +267,7 @@ function hr_locations_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 1,
     ),
   );
 
@@ -237,6 +276,7 @@ function hr_locations_field_default_field_instances() {
   t('Admin Level');
   t('Description');
   t('Geofield');
+  t('ISO3');
   t('Local PCode');
   t('Name');
   t('PCode');
