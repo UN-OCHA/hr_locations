@@ -15,7 +15,7 @@ function hr_locations_taxonomy_term_presave($term) {
   if (empty($term->field_loc_admin_level[LANGUAGE_NONE])) {
     // Get term parents
     $parents = taxonomy_get_parents_all($term->tid);
-    $term->field_loc_admin_level[LANGUAGE_NONE] = array(array('value' => count($parents)));
+    $term->field_loc_admin_level[LANGUAGE_NONE] = array(array('value' => count($parents)-1));
   }
 }
 
